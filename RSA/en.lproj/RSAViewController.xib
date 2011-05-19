@@ -43,7 +43,7 @@
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUITabBar" id="519811061">
+					<object class="IBUITabBar" id="1056320882">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{0, 411}, {320, 49}}</string>
@@ -56,36 +56,48 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUITabBarItem" id="186257432">
+							<object class="IBUITabBarItem" id="620813203">
 								<string key="IBUITitle">Key</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">30-key.png</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<reference key="IBUITabBar" ref="519811061"/>
+								<reference key="IBUITabBar" ref="1056320882"/>
 							</object>
-							<object class="IBUITabBarItem" id="782668335">
+							<object class="IBUITabBarItem" id="33303239">
 								<string key="IBUITitle">Decrypt</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">04-squiggle inverted.png</string>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<reference key="IBUITabBar" ref="519811061"/>
+								<reference key="IBUITabBar" ref="1056320882"/>
 							</object>
-							<object class="IBUITabBarItem" id="348707638">
+							<object class="IBUITabBarItem" id="843433101">
 								<string key="IBUITitle">Encrypt</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">04-squiggle.png</string>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<reference key="IBUITabBar" ref="519811061"/>
+								<reference key="IBUITabBar" ref="1056320882"/>
 							</object>
-							<object class="IBUITabBarItem" id="620038555">
+							<object class="IBUITabBarItem" id="755854397">
 								<string key="IBUITitle">Crack</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">22-skull-n-bones.png</string>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<reference key="IBUITabBar" ref="519811061"/>
+								<reference key="IBUITabBar" ref="1056320882"/>
 							</object>
 						</object>
 					</object>
 				</object>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView" ref="519811061"/>
+				<reference key="NSNextKeyView" ref="1056320882"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC43NQA</bytes>
@@ -135,41 +147,41 @@
 						<reference key="object" ref="774585933"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="519811061"/>
+							<reference ref="1056320882"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
-						<reference key="object" ref="519811061"/>
+						<reference key="object" ref="1056320882"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="186257432"/>
-							<reference ref="782668335"/>
-							<reference ref="348707638"/>
-							<reference ref="620038555"/>
+							<reference ref="620813203"/>
+							<reference ref="33303239"/>
+							<reference ref="843433101"/>
+							<reference ref="755854397"/>
 						</object>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">11</int>
-						<reference key="object" ref="186257432"/>
-						<reference key="parent" ref="519811061"/>
+						<reference key="object" ref="620813203"/>
+						<reference key="parent" ref="1056320882"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="782668335"/>
-						<reference key="parent" ref="519811061"/>
+						<reference key="object" ref="33303239"/>
+						<reference key="parent" ref="1056320882"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
-						<reference key="object" ref="348707638"/>
-						<reference key="parent" ref="519811061"/>
+						<reference key="object" ref="843433101"/>
+						<reference key="parent" ref="1056320882"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="620038555"/>
-						<reference key="parent" ref="519811061"/>
+						<reference key="object" ref="755854397"/>
+						<reference key="parent" ref="1056320882"/>
 					</object>
 				</object>
 			</object>
@@ -224,8 +236,21 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">30-key.png</string>
-			<string key="NS.object.0">{12, 26}</string>
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>04-squiggle inverted.png</string>
+				<string>04-squiggle.png</string>
+				<string>22-skull-n-bones.png</string>
+				<string>30-key.png</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{33, 16}</string>
+				<string>{33, 16}</string>
+				<string>{30, 32}</string>
+				<string>{12, 26}</string>
+			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">294</string>
 	</data>

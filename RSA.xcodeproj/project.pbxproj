@@ -19,6 +19,9 @@
 		47B3B80F138506AC00DB8431 /* 30-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B80E138506AC00DB8431 /* 30-key.png */; };
 		47B3B8131385082700DB8431 /* rsa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8121385082700DB8431 /* rsa1.png */; };
 		47B3B8151385083800DB8431 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8141385083800DB8431 /* Default.png */; };
+		47B3B84613850ABF00DB8431 /* 04-squiggle inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */; };
+		47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84713850ACB00DB8431 /* 04-squiggle.png */; };
+		47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		47B3B80E138506AC00DB8431 /* 30-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30-key.png"; sourceTree = "<group>"; };
 		47B3B8121385082700DB8431 /* rsa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsa1.png; sourceTree = "<group>"; };
 		47B3B8141385083800DB8431 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle inverted.png"; sourceTree = "<group>"; };
+		47B3B84713850ACB00DB8431 /* 04-squiggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle.png"; sourceTree = "<group>"; };
+		47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22-skull-n-bones.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 		475DC3971383C960006C2AD3 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
+				47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */,
+				47B3B84713850ACB00DB8431 /* 04-squiggle.png */,
+				47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */,
 				47B3B80E138506AC00DB8431 /* 30-key.png */,
 				475DC3A01383C960006C2AD3 /* RSAAppDelegate.h */,
 				475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */,
@@ -163,6 +172,9 @@
 				47B3B80F138506AC00DB8431 /* 30-key.png in Resources */,
 				47B3B8131385082700DB8431 /* rsa1.png in Resources */,
 				47B3B8151385083800DB8431 /* Default.png in Resources */,
+				47B3B84613850ABF00DB8431 /* 04-squiggle inverted.png in Resources */,
+				47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */,
+				47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
