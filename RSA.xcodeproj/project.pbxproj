@@ -25,6 +25,8 @@
 		47B3B880138511C500DB8431 /* KeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3B87D138511C500DB8431 /* KeyViewController.m */; };
 		47B3B881138511C500DB8431 /* KeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B87E138511C500DB8431 /* KeyViewController.xib */; };
 		47B3B8831385153000DB8431 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8821385153000DB8431 /* MainWindow.xib */; };
+		C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */; };
+		C8F5E4EE13852D6500ADC81F /* EncryptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +49,13 @@
 		47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle inverted.png"; sourceTree = "<group>"; };
 		47B3B84713850ACB00DB8431 /* 04-squiggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle.png"; sourceTree = "<group>"; };
 		47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22-skull-n-bones.png"; sourceTree = "<group>"; };
-		47B3B87C138511C500DB8431 /* KeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = KeyViewController.h; sourceTree = "<group>"; };
+		47B3B87C138511C500DB8431 /* KeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyViewController.h; sourceTree = "<group>"; };
 		47B3B87D138511C500DB8431 /* KeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyViewController.m; sourceTree = "<group>"; };
 		47B3B87E138511C500DB8431 /* KeyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyViewController.xib; sourceTree = "<group>"; };
 		47B3B8821385153000DB8431 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptViewController.h; sourceTree = "<group>"; };
+		C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptViewController.m; sourceTree = "<group>"; };
+		C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EncryptViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,9 @@
 				475DC3A61383C960006C2AD3 /* RSAViewController.h */,
 				475DC3A71383C960006C2AD3 /* RSAViewController.m */,
 				475DC3A91383C960006C2AD3 /* RSAViewController.xib */,
+				C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */,
+				C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */,
+				C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */,
 				475DC3981383C960006C2AD3 /* Supporting Files */,
 				47B3B87C138511C500DB8431 /* KeyViewController.h */,
 				47B3B87D138511C500DB8431 /* KeyViewController.m */,
@@ -185,6 +193,7 @@
 				47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */,
 				47B3B881138511C500DB8431 /* KeyViewController.xib in Resources */,
 				47B3B8831385153000DB8431 /* MainWindow.xib in Resources */,
+				C8F5E4EE13852D6500ADC81F /* EncryptViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +209,7 @@
 				475DC3A81383C960006C2AD3 /* RSAViewController.m in Sources */,
 				47B3B87F138511C500DB8431 /* KeyViewController.h in Sources */,
 				47B3B880138511C500DB8431 /* KeyViewController.m in Sources */,
+				C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
