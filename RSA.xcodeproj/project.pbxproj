@@ -13,7 +13,6 @@
 		475DC39C1383C960006C2AD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 475DC39A1383C960006C2AD3 /* InfoPlist.strings */; };
 		475DC39F1383C960006C2AD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC39E1383C960006C2AD3 /* main.m */; };
 		475DC3A21383C960006C2AD3 /* RSAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */; };
-		475DC3A51383C960006C2AD3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475DC3A31383C960006C2AD3 /* MainWindow.xib */; };
 		475DC3A81383C960006C2AD3 /* RSAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC3A71383C960006C2AD3 /* RSAViewController.m */; };
 		475DC3AB1383C960006C2AD3 /* RSAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475DC3A91383C960006C2AD3 /* RSAViewController.xib */; };
 		47B3B80F138506AC00DB8431 /* 30-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B80E138506AC00DB8431 /* 30-key.png */; };
@@ -22,6 +21,10 @@
 		47B3B84613850ABF00DB8431 /* 04-squiggle inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */; };
 		47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84713850ACB00DB8431 /* 04-squiggle.png */; };
 		47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */; };
+		47B3B87F138511C500DB8431 /* KeyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 47B3B87C138511C500DB8431 /* KeyViewController.h */; };
+		47B3B880138511C500DB8431 /* KeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3B87D138511C500DB8431 /* KeyViewController.m */; };
+		47B3B881138511C500DB8431 /* KeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B87E138511C500DB8431 /* KeyViewController.xib */; };
+		47B3B8831385153000DB8431 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8821385153000DB8431 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +38,6 @@
 		475DC39E1383C960006C2AD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		475DC3A01383C960006C2AD3 /* RSAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAAppDelegate.h; sourceTree = "<group>"; };
 		475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAAppDelegate.m; sourceTree = "<group>"; };
-		475DC3A41383C960006C2AD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		475DC3A61383C960006C2AD3 /* RSAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAViewController.h; sourceTree = "<group>"; };
 		475DC3A71383C960006C2AD3 /* RSAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAViewController.m; sourceTree = "<group>"; };
 		475DC3AA1383C960006C2AD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RSAViewController.xib; sourceTree = "<group>"; };
@@ -45,6 +47,10 @@
 		47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle inverted.png"; sourceTree = "<group>"; };
 		47B3B84713850ACB00DB8431 /* 04-squiggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle.png"; sourceTree = "<group>"; };
 		47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22-skull-n-bones.png"; sourceTree = "<group>"; };
+		47B3B87C138511C500DB8431 /* KeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = KeyViewController.h; sourceTree = "<group>"; };
+		47B3B87D138511C500DB8431 /* KeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyViewController.m; sourceTree = "<group>"; };
+		47B3B87E138511C500DB8431 /* KeyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyViewController.xib; sourceTree = "<group>"; };
+		47B3B8821385153000DB8431 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		475DC3971383C960006C2AD3 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
+				47B3B8821385153000DB8431 /* MainWindow.xib */,
 				47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */,
 				47B3B84713850ACB00DB8431 /* 04-squiggle.png */,
 				47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */,
@@ -99,11 +106,13 @@
 				475DC3A01383C960006C2AD3 /* RSAAppDelegate.h */,
 				475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */,
 				47B3B8121385082700DB8431 /* rsa1.png */,
-				475DC3A31383C960006C2AD3 /* MainWindow.xib */,
 				475DC3A61383C960006C2AD3 /* RSAViewController.h */,
 				475DC3A71383C960006C2AD3 /* RSAViewController.m */,
 				475DC3A91383C960006C2AD3 /* RSAViewController.xib */,
 				475DC3981383C960006C2AD3 /* Supporting Files */,
+				47B3B87C138511C500DB8431 /* KeyViewController.h */,
+				47B3B87D138511C500DB8431 /* KeyViewController.m */,
+				47B3B87E138511C500DB8431 /* KeyViewController.xib */,
 			);
 			path = RSA;
 			sourceTree = "<group>";
@@ -167,7 +176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				475DC39C1383C960006C2AD3 /* InfoPlist.strings in Resources */,
-				475DC3A51383C960006C2AD3 /* MainWindow.xib in Resources */,
 				475DC3AB1383C960006C2AD3 /* RSAViewController.xib in Resources */,
 				47B3B80F138506AC00DB8431 /* 30-key.png in Resources */,
 				47B3B8131385082700DB8431 /* rsa1.png in Resources */,
@@ -175,6 +183,8 @@
 				47B3B84613850ABF00DB8431 /* 04-squiggle inverted.png in Resources */,
 				47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */,
 				47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */,
+				47B3B881138511C500DB8431 /* KeyViewController.xib in Resources */,
+				47B3B8831385153000DB8431 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +198,8 @@
 				475DC39F1383C960006C2AD3 /* main.m in Sources */,
 				475DC3A21383C960006C2AD3 /* RSAAppDelegate.m in Sources */,
 				475DC3A81383C960006C2AD3 /* RSAViewController.m in Sources */,
+				47B3B87F138511C500DB8431 /* KeyViewController.h in Sources */,
+				47B3B880138511C500DB8431 /* KeyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,14 +212,6 @@
 				475DC39B1383C960006C2AD3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		475DC3A31383C960006C2AD3 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				475DC3A41383C960006C2AD3 /* en */,
-			);
-			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 		475DC3A91383C960006C2AD3 /* RSAViewController.xib */ = {
