@@ -7,15 +7,19 @@
 //
 
 #import "KeyViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation KeyViewController
+
+@synthesize cell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
+        
     }
     return self;
 }
@@ -38,6 +42,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+ 
+    [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"GrayPattern" ofType:@"png"]]]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -85,28 +92,36 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"KeyCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    UITableViewCell *acell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (acell == nil) {
+        [[NSBundle mainBundle] loadNibNamed:@"KeyTableViewCell" owner:self options:nil];
+        acell = self.cell;
+       
     }
+    
+
+    
+    
+    [(UILabel *)[acell viewWithTag:1] setText:@"Marcel's Key"];
+    [(UILabel *)[acell viewWithTag:2] setText:@"Very strong security"];
     
     // Configure the cell...
     
-    return cell;
+    return acell;
 }
 
 /*

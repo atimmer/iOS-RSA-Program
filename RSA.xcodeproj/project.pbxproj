@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		475DC3921383C960006C2AD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3911383C960006C2AD3 /* UIKit.framework */; };
 		475DC3941383C960006C2AD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3931383C960006C2AD3 /* Foundation.framework */; };
-		475DC3961383C960006C2AD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3951383C960006C2AD3 /* CoreGraphics.framework */; };
 		475DC39C1383C960006C2AD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 475DC39A1383C960006C2AD3 /* InfoPlist.strings */; };
 		475DC39F1383C960006C2AD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC39E1383C960006C2AD3 /* main.m */; };
 		475DC3A21383C960006C2AD3 /* RSAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */; };
 		475DC3A81383C960006C2AD3 /* RSAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC3A71383C960006C2AD3 /* RSAViewController.m */; };
 		475DC3AB1383C960006C2AD3 /* RSAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475DC3A91383C960006C2AD3 /* RSAViewController.xib */; };
+		47964CFF13868567006BD316 /* KeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47964CFD13868567006BD316 /* KeyViewController.m */; };
+		47964D0013868567006BD316 /* KeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47964CFE13868567006BD316 /* KeyViewController.xib */; };
+		47964D05138686DA006BD316 /* KeyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47964D04138686DA006BD316 /* KeyTableViewCell.xib */; };
+		47964D281386D0F1006BD316 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47964D271386D0F1006BD316 /* CoreGraphics.framework */; };
+		47964D2A1386D0FA006BD316 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47964D291386D0FA006BD316 /* QuartzCore.framework */; };
+		47964D2C1386D6B1006BD316 /* GradientGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 47964D2B1386D6B1006BD316 /* GradientGray.png */; };
+		47964D2E1386D850006BD316 /* GrayPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 47964D2D1386D850006BD316 /* GrayPattern.png */; };
 		47B3B80F138506AC00DB8431 /* 30-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B80E138506AC00DB8431 /* 30-key.png */; };
 		47B3B8131385082700DB8431 /* rsa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8121385082700DB8431 /* rsa1.png */; };
 		47B3B8151385083800DB8431 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8141385083800DB8431 /* Default.png */; };
 		47B3B84613850ABF00DB8431 /* 04-squiggle inverted.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */; };
 		47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84713850ACB00DB8431 /* 04-squiggle.png */; };
 		47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */; };
-		47B3B87F138511C500DB8431 /* KeyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 47B3B87C138511C500DB8431 /* KeyViewController.h */; };
-		47B3B880138511C500DB8431 /* KeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3B87D138511C500DB8431 /* KeyViewController.m */; };
-		47B3B881138511C500DB8431 /* KeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B87E138511C500DB8431 /* KeyViewController.xib */; };
 		47B3B8831385153000DB8431 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8821385153000DB8431 /* MainWindow.xib */; };
 		47D17BB213863A4A0042AFFB /* DecryptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D17BB113863A4A0042AFFB /* DecryptView.xib */; };
 		47D17BB613863A540042AFFB /* DecryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D17BB513863A540042AFFB /* DecryptViewController.m */; };
@@ -45,15 +48,21 @@
 		475DC3A61383C960006C2AD3 /* RSAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAViewController.h; sourceTree = "<group>"; };
 		475DC3A71383C960006C2AD3 /* RSAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAViewController.m; sourceTree = "<group>"; };
 		475DC3AA1383C960006C2AD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RSAViewController.xib; sourceTree = "<group>"; };
+		47964CFC13868567006BD316 /* KeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyViewController.h; path = RSA.xcodeproj/KeyViewController.h; sourceTree = SOURCE_ROOT; };
+		47964CFD13868567006BD316 /* KeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyViewController.m; path = RSA.xcodeproj/KeyViewController.m; sourceTree = SOURCE_ROOT; };
+		47964CFE13868567006BD316 /* KeyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KeyViewController.xib; path = RSA.xcodeproj/KeyViewController.xib; sourceTree = SOURCE_ROOT; };
+		47964D04138686DA006BD316 /* KeyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyTableViewCell.xib; sourceTree = "<group>"; };
+		47964D261386D09E006BD316 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47964D271386D0F1006BD316 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47964D291386D0FA006BD316 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		47964D2B1386D6B1006BD316 /* GradientGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GradientGray.png; path = ../../../../../../../Desktop/GradientGray.png; sourceTree = "<group>"; };
+		47964D2D1386D850006BD316 /* GrayPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GrayPattern.png; path = ../../../../../../../Desktop/GrayPattern.png; sourceTree = "<group>"; };
 		47B3B80E138506AC00DB8431 /* 30-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30-key.png"; sourceTree = "<group>"; };
 		47B3B8121385082700DB8431 /* rsa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsa1.png; sourceTree = "<group>"; };
 		47B3B8141385083800DB8431 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle inverted.png"; sourceTree = "<group>"; };
 		47B3B84713850ACB00DB8431 /* 04-squiggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle.png"; sourceTree = "<group>"; };
 		47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22-skull-n-bones.png"; sourceTree = "<group>"; };
-		47B3B87C138511C500DB8431 /* KeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyViewController.h; sourceTree = "<group>"; };
-		47B3B87D138511C500DB8431 /* KeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyViewController.m; sourceTree = "<group>"; };
-		47B3B87E138511C500DB8431 /* KeyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyViewController.xib; sourceTree = "<group>"; };
 		47B3B8821385153000DB8431 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 		47D17BB113863A4A0042AFFB /* DecryptView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DecryptView.xib; sourceTree = "<group>"; };
 		47D17BB413863A500042AFFB /* DecryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecryptViewController.h; sourceTree = "<group>"; };
@@ -68,9 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47964D2A1386D0FA006BD316 /* QuartzCore.framework in Frameworks */,
+				47964D281386D0F1006BD316 /* CoreGraphics.framework in Frameworks */,
 				475DC3921383C960006C2AD3 /* UIKit.framework in Frameworks */,
 				475DC3941383C960006C2AD3 /* Foundation.framework in Frameworks */,
-				475DC3961383C960006C2AD3 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,9 @@
 		475DC3821383C95F006C2AD3 = {
 			isa = PBXGroup;
 			children = (
+				47964D291386D0FA006BD316 /* QuartzCore.framework */,
+				47964D271386D0F1006BD316 /* CoreGraphics.framework */,
+				47964D261386D09E006BD316 /* CoreGraphics.framework */,
 				47B3B8141385083800DB8431 /* Default.png */,
 				475DC3971383C960006C2AD3 /* RSA */,
 				475DC3901383C960006C2AD3 /* Frameworks */,
@@ -108,27 +121,10 @@
 		475DC3971383C960006C2AD3 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
-				47B3B8821385153000DB8431 /* MainWindow.xib */,
-				47D17BB113863A4A0042AFFB /* DecryptView.xib */,
-				47D17BB413863A500042AFFB /* DecryptViewController.h */,
-				47D17BB513863A540042AFFB /* DecryptViewController.m */,
-				47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */,
-				47B3B84713850ACB00DB8431 /* 04-squiggle.png */,
-				47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */,
-				47B3B80E138506AC00DB8431 /* 30-key.png */,
-				475DC3A01383C960006C2AD3 /* RSAAppDelegate.h */,
-				475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */,
-				47B3B8121385082700DB8431 /* rsa1.png */,
-				475DC3A61383C960006C2AD3 /* RSAViewController.h */,
-				475DC3A71383C960006C2AD3 /* RSAViewController.m */,
-				475DC3A91383C960006C2AD3 /* RSAViewController.xib */,
-				C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */,
-				C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */,
-				C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */,
+				47964D031386858C006BD316 /* Models */,
+				47964D0213868583006BD316 /* Views */,
+				47964D011386857B006BD316 /* Controllers */,
 				475DC3981383C960006C2AD3 /* Supporting Files */,
-				47B3B87C138511C500DB8431 /* KeyViewController.h */,
-				47B3B87D138511C500DB8431 /* KeyViewController.m */,
-				47B3B87E138511C500DB8431 /* KeyViewController.xib */,
 			);
 			path = RSA;
 			sourceTree = "<group>";
@@ -136,12 +132,56 @@
 		475DC3981383C960006C2AD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47964D2B1386D6B1006BD316 /* GradientGray.png */,
+				47B3B8121385082700DB8431 /* rsa1.png */,
+				47964D2D1386D850006BD316 /* GrayPattern.png */,
+				47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */,
+				47B3B84713850ACB00DB8431 /* 04-squiggle.png */,
+				47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */,
+				47B3B80E138506AC00DB8431 /* 30-key.png */,
 				475DC3991383C960006C2AD3 /* RSA-Info.plist */,
 				475DC39A1383C960006C2AD3 /* InfoPlist.strings */,
 				475DC39D1383C960006C2AD3 /* RSA-Prefix.pch */,
 				475DC39E1383C960006C2AD3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47964D011386857B006BD316 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				47964CFC13868567006BD316 /* KeyViewController.h */,
+				47964CFD13868567006BD316 /* KeyViewController.m */,
+				47D17BB413863A500042AFFB /* DecryptViewController.h */,
+				47D17BB513863A540042AFFB /* DecryptViewController.m */,
+				475DC3A01383C960006C2AD3 /* RSAAppDelegate.h */,
+				475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */,
+				475DC3A61383C960006C2AD3 /* RSAViewController.h */,
+				475DC3A71383C960006C2AD3 /* RSAViewController.m */,
+				C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */,
+				C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		47964D0213868583006BD316 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47964CFE13868567006BD316 /* KeyViewController.xib */,
+				47B3B8821385153000DB8431 /* MainWindow.xib */,
+				47964D04138686DA006BD316 /* KeyTableViewCell.xib */,
+				47D17BB113863A4A0042AFFB /* DecryptView.xib */,
+				475DC3A91383C960006C2AD3 /* RSAViewController.xib */,
+				C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		47964D031386858C006BD316 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,10 +239,13 @@
 				47B3B84613850ABF00DB8431 /* 04-squiggle inverted.png in Resources */,
 				47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */,
 				47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */,
-				47B3B881138511C500DB8431 /* KeyViewController.xib in Resources */,
 				47B3B8831385153000DB8431 /* MainWindow.xib in Resources */,
 				C8F5E4EE13852D6500ADC81F /* EncryptViewController.xib in Resources */,
 				47D17BB213863A4A0042AFFB /* DecryptView.xib in Resources */,
+				47964D0013868567006BD316 /* KeyViewController.xib in Resources */,
+				47964D05138686DA006BD316 /* KeyTableViewCell.xib in Resources */,
+				47964D2C1386D6B1006BD316 /* GradientGray.png in Resources */,
+				47964D2E1386D850006BD316 /* GrayPattern.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,10 +259,9 @@
 				475DC39F1383C960006C2AD3 /* main.m in Sources */,
 				475DC3A21383C960006C2AD3 /* RSAAppDelegate.m in Sources */,
 				475DC3A81383C960006C2AD3 /* RSAViewController.m in Sources */,
-				47B3B87F138511C500DB8431 /* KeyViewController.h in Sources */,
-				47B3B880138511C500DB8431 /* KeyViewController.m in Sources */,
 				C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */,
 				47D17BB613863A540042AFFB /* DecryptViewController.m in Sources */,
+				47964CFF13868567006BD316 /* KeyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

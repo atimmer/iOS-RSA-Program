@@ -12,5 +12,6 @@
 @interface KeyViewController : UITableViewController {
     
 }
+@property (nonatomic, retain) IBOutlet UITableViewCell *cell;
 
 @end
