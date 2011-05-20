@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473F08571386DA6A00479C95 /* GradientGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 473F08561386DA6A00479C95 /* GradientGray.png */; };
+		473F085A1386DA7E00479C95 /* GrayPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 473F08591386DA7E00479C95 /* GrayPattern.png */; };
 		475DC3921383C960006C2AD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3911383C960006C2AD3 /* UIKit.framework */; };
 		475DC3941383C960006C2AD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3931383C960006C2AD3 /* Foundation.framework */; };
 		475DC39C1383C960006C2AD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 475DC39A1383C960006C2AD3 /* InfoPlist.strings */; };
@@ -19,8 +21,6 @@
 		47964D05138686DA006BD316 /* KeyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47964D04138686DA006BD316 /* KeyTableViewCell.xib */; };
 		47964D281386D0F1006BD316 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47964D271386D0F1006BD316 /* CoreGraphics.framework */; };
 		47964D2A1386D0FA006BD316 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47964D291386D0FA006BD316 /* QuartzCore.framework */; };
-		47964D2C1386D6B1006BD316 /* GradientGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 47964D2B1386D6B1006BD316 /* GradientGray.png */; };
-		47964D2E1386D850006BD316 /* GrayPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 47964D2D1386D850006BD316 /* GrayPattern.png */; };
 		47B3B80F138506AC00DB8431 /* 30-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B80E138506AC00DB8431 /* 30-key.png */; };
 		47B3B8131385082700DB8431 /* rsa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8121385082700DB8431 /* rsa1.png */; };
 		47B3B8151385083800DB8431 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8141385083800DB8431 /* Default.png */; };
@@ -35,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		473F08561386DA6A00479C95 /* GradientGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GradientGray.png; sourceTree = "<group>"; };
+		473F08591386DA7E00479C95 /* GrayPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrayPattern.png; sourceTree = "<group>"; };
 		475DC38D1383C960006C2AD3 /* RSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475DC3911383C960006C2AD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		475DC3931383C960006C2AD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,8 +57,6 @@
 		47964D261386D09E006BD316 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		47964D271386D0F1006BD316 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		47964D291386D0FA006BD316 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		47964D2B1386D6B1006BD316 /* GradientGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GradientGray.png; path = ../../../../../../../Desktop/GradientGray.png; sourceTree = "<group>"; };
-		47964D2D1386D850006BD316 /* GrayPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GrayPattern.png; path = ../../../../../../../Desktop/GrayPattern.png; sourceTree = "<group>"; };
 		47B3B80E138506AC00DB8431 /* 30-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30-key.png"; sourceTree = "<group>"; };
 		47B3B8121385082700DB8431 /* rsa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsa1.png; sourceTree = "<group>"; };
 		47B3B8141385083800DB8431 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -132,9 +132,9 @@
 		475DC3981383C960006C2AD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				47964D2B1386D6B1006BD316 /* GradientGray.png */,
+				473F08561386DA6A00479C95 /* GradientGray.png */,
+				473F08591386DA7E00479C95 /* GrayPattern.png */,
 				47B3B8121385082700DB8431 /* rsa1.png */,
-				47964D2D1386D850006BD316 /* GrayPattern.png */,
 				47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */,
 				47B3B84713850ACB00DB8431 /* 04-squiggle.png */,
 				47B3B84513850ABF00DB8431 /* 04-squiggle inverted.png */,
@@ -244,8 +244,8 @@
 				47D17BB213863A4A0042AFFB /* DecryptView.xib in Resources */,
 				47964D0013868567006BD316 /* KeyViewController.xib in Resources */,
 				47964D05138686DA006BD316 /* KeyTableViewCell.xib in Resources */,
-				47964D2C1386D6B1006BD316 /* GradientGray.png in Resources */,
-				47964D2E1386D850006BD316 /* GrayPattern.png in Resources */,
+				473F08571386DA6A00479C95 /* GradientGray.png in Resources */,
+				473F085A1386DA7E00479C95 /* GrayPattern.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
