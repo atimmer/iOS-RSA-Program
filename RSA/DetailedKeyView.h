@@ -1,14 +1,16 @@
 //
-//  RSAAppDelegate.m
+//  DetailedKeyView.h
 //  RSA
 //
 //  Created by Marcel Boersma on 5/26/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RSAAppDelegate.h"
+#import <UIKit/UIKit.h>
 
 
-@implementation RSAAppDelegate
+@interface DetailedKeyView : UIViewController {
+    
+}
 
 @end
