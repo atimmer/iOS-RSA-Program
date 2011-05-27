@@ -1,15 +1,15 @@
 //
-//  DetailedKeyView.m
+//  PrimeView.m
 //  RSA
 //
-//  Created by Marcel Boersma on 5/26/11.
+//  Created by Marcel Boersma on 5/27/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "DetailedKeyView.h"
+#import "PrimeView.h"
 
 
-@implementation DetailedKeyView
+@implementation PrimeView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
