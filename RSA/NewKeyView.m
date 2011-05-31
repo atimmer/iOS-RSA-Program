@@ -1,27 +1,21 @@
 //
-//  KeyViewController.m
+//  NewKeyView.m
 //  RSA
 //
-//  Created by Marcel Boersma on 5/20/11.
+//  Created by Marcel Boersma on 5/31/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "KeyViewController.h"
-#import <QuartzCore/QuartzCore.h>
-#import "DetailedKeyView.h"
-#import "NewKeyNavigationView.h"
+#import "NewKeyView.h"
 
-@implementation KeyViewController
 
-@synthesize cell, addButton, editButton;
+@implementation NewKeyView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        
-        
     }
     return self;
 }
@@ -45,33 +39,17 @@
 {
     [super viewDidLoad];
     
-    //Hide the toolbar
-    self.navigationController.toolbarHidden = YES;
-    
-    //hide the prompt message
-    self.navigationItem.prompt = nil;
-    
-    //Set the title of the tableview
-    self.navigationItem.title = @"RSA Keys";
-    
-    //set the addbutton
-    self.navigationItem.rightBarButtonItem = self.addButton;
-    //self.myNavigationItem.leftBarButtonItem = self.editButton;
     
     
-    cells = 4;
-  
-
+    [self.navigationItem setTitle:@"Add RSA Key"];
+    [self.navigationItem setLeftBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self.parentViewController action:@selector(dismissModalViewControllerAnimated:)] autorelease]];
+    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:nil] autorelease]];
     
-    
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    [self.editButton setAction:@selector(clickedEditButton:)];
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
@@ -84,8 +62,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -109,45 +85,60 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if(section == 0)
+    {
+        return @"Priemgetallen";
+        
+    }else if(section == 1){
+        return @"N/Z";
+    }else if(section == 2){
+        return @"Keys";
+    }
+    
+    return @"";
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return cells;
+    
+    NSInteger rowsInSection = 0;
+    
+    if(section == 0)
+    {
+        rowsInSection = 1;
+    }else if(section == 1)
+    {
+        rowsInSection = 2;
+    }
+    
+    return rowsInSection;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"KeyCell";
+    static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *acell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (acell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"KeyTableViewCell" owner:self options:nil];
-        acell = self.cell;
-       
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-
-    UISwipeGestureRecognizer *leftslide = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(clickedEditButton:)];
-    [leftslide setDirection:UISwipeGestureRecognizerDirectionLeft];
-    
-    [acell setGestureRecognizers:[NSArray arrayWithObjects: leftslide, nil]];
-
-    
-    [(UILabel *)[acell viewWithTag:1] setText:@"Marcel's Key"];
-    [(UILabel *)[acell viewWithTag:2] setText:@"Very strong security"];
     
     // Configure the cell...
     
-   
-    
-    return acell;
+    return cell;
 }
 
 /*
@@ -193,8 +184,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -203,69 +192,6 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
-    
-    DetailedKeyView *aVC = [[DetailedKeyView alloc] initWithNibName:@"DetailedKeyView" bundle:nil];
-    
-    [self.navigationController pushViewController:aVC animated:YES];
-    
-    [aVC release];
-    
-    
-}
-
--(IBAction)clickedAddButton:(id)sender
-{
-    NSLog(@"Add button clicked");
-    
-    NewKeyNavigationView *newKeyView = [[NewKeyNavigationView alloc] initWithNibName:@"NewKeyView" bundle:nil];
-        
-    /*[UIView beginAnimations:@"NewKey" context:nil];
-    
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
-    
-    [UIView setAnimationDuration:0.25];
-    
-    [UIView commitAnimations];
-
-    
-    [self.navigationController pushViewController:newKeyView animated:NO];
-    
-    [self.navigationController setNavigationBarHidden:NO];
-    */
-    
-    [self.navigationController presentModalViewController:newKeyView animated:YES];
-    
-    [self.tableView reloadData];
-    
-    
-    [newKeyView release];
-}
-
--(IBAction)clickedEditButton:(id)sender
-{
-    CGPoint swipeLocation = [(UISwipeGestureRecognizer*)sender locationInView:self.tableView];
-    NSIndexPath *swipeIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
-    UITableViewCell *scell = [self.tableView cellForRowAtIndexPath:swipeIndexPath];
-    
-    if(![scell isEditing])
-        [scell   setEditing:YES animated:YES];
-    
-    
-}
-
-
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    UITableViewCell *cellToDelete = [tableView cellForRowAtIndexPath:indexPath];
-    
-    cells--;
-    
-    [tableView reloadData];
-    
-    [cellToDelete setEditing:NO animated:YES];
-    
-    NSLog(@"blflsa");
 }
 
 @end

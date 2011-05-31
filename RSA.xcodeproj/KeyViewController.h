@@ -10,8 +10,15 @@
 
 
 @interface KeyViewController : UITableViewController {
-    
+    NSInteger cells;
 }
+
+-(IBAction)clickedAddButton:(id)sender;
+-(IBAction)clickedEditButton:(id)sender;
+
+
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *addButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *editButton;
 
 @end

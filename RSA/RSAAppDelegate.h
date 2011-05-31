@@ -6,11 +6,12 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-
-@interface RSAAppDelegate : NSObject {
+@interface RSAAppDelegate : NSObject<UIApplicationDelegate> {
     
 }
+
+@property (nonatomic, retain) IBOutlet UINavigationController *myNavigationController;
 
 @end

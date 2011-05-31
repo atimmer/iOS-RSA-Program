@@ -13,14 +13,18 @@
 		475DC3941383C960006C2AD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3931383C960006C2AD3 /* Foundation.framework */; };
 		475DC39C1383C960006C2AD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 475DC39A1383C960006C2AD3 /* InfoPlist.strings */; };
 		475DC39F1383C960006C2AD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC39E1383C960006C2AD3 /* main.m */; };
-		475DC3A21383C960006C2AD3 /* RSAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */; };
-		475DC3A81383C960006C2AD3 /* RSAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475DC3A71383C960006C2AD3 /* RSAViewController.m */; };
-		475DC3AB1383C960006C2AD3 /* RSAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475DC3A91383C960006C2AD3 /* RSAViewController.xib */; };
+		4766355E138F9B4C00C01D50 /* DetailedKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4766355C138F9B4C00C01D50 /* DetailedKeyView.m */; };
+		4766355F138F9B4C00C01D50 /* DetailedKeyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4766355D138F9B4C00C01D50 /* DetailedKeyView.xib */; };
+		47663563138FA27400C01D50 /* PrimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47663561138FA27400C01D50 /* PrimeView.m */; };
+		47663564138FA27400C01D50 /* PrimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47663562138FA27400C01D50 /* PrimeView.xib */; };
+		4781ECAF13957FA100F7DF70 /* NewKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4781ECAD13957FA100F7DF70 /* NewKeyView.m */; };
+		4781ECB013957FA100F7DF70 /* NewKeyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4781ECAE13957FA100F7DF70 /* NewKeyView.xib */; };
+		4781ECB813958EB000F7DF70 /* NewKeyNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4781ECB613958EB000F7DF70 /* NewKeyNavigationView.m */; };
+		4781ECB913958EB000F7DF70 /* NewKeyNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4781ECB713958EB000F7DF70 /* NewKeyNavigationView.xib */; };
 		47964CFF13868567006BD316 /* KeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47964CFD13868567006BD316 /* KeyViewController.m */; };
 		47964D0013868567006BD316 /* KeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47964CFE13868567006BD316 /* KeyViewController.xib */; };
 		47964D05138686DA006BD316 /* KeyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47964D04138686DA006BD316 /* KeyTableViewCell.xib */; };
-		47964D281386D0F1006BD316 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47964D271386D0F1006BD316 /* CoreGraphics.framework */; };
-		47964D2A1386D0FA006BD316 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47964D291386D0FA006BD316 /* QuartzCore.framework */; };
+		47B0994A138ECC61000CEAFB /* RSAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B09949138ECC61000CEAFB /* RSAAppDelegate.m */; };
 		47B3B80F138506AC00DB8431 /* 30-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B80E138506AC00DB8431 /* 30-key.png */; };
 		47B3B8131385082700DB8431 /* rsa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8121385082700DB8431 /* rsa1.png */; };
 		47B3B8151385083800DB8431 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8141385083800DB8431 /* Default.png */; };
@@ -28,6 +32,7 @@
 		47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84713850ACB00DB8431 /* 04-squiggle.png */; };
 		47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */; };
 		47B3B8831385153000DB8431 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B3B8821385153000DB8431 /* MainWindow.xib */; };
+		47D11690139299CB004DB278 /* convertbot-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D1168F139299CB004DB278 /* convertbot-icon.png */; };
 		47D17BB213863A4A0042AFFB /* DecryptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D17BB113863A4A0042AFFB /* DecryptView.xib */; };
 		47D17BB613863A540042AFFB /* DecryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D17BB513863A540042AFFB /* DecryptViewController.m */; };
 		C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */; };
@@ -45,18 +50,24 @@
 		475DC39B1383C960006C2AD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		475DC39D1383C960006C2AD3 /* RSA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSA-Prefix.pch"; sourceTree = "<group>"; };
 		475DC39E1383C960006C2AD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		475DC3A01383C960006C2AD3 /* RSAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAAppDelegate.h; sourceTree = "<group>"; };
-		475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAAppDelegate.m; sourceTree = "<group>"; };
-		475DC3A61383C960006C2AD3 /* RSAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAViewController.h; sourceTree = "<group>"; };
-		475DC3A71383C960006C2AD3 /* RSAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAViewController.m; sourceTree = "<group>"; };
-		475DC3AA1383C960006C2AD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RSAViewController.xib; sourceTree = "<group>"; };
+		4766355B138F9B4C00C01D50 /* DetailedKeyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailedKeyView.h; path = RSA.xcodeproj/DetailedKeyView.h; sourceTree = SOURCE_ROOT; };
+		4766355C138F9B4C00C01D50 /* DetailedKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailedKeyView.m; path = RSA.xcodeproj/DetailedKeyView.m; sourceTree = SOURCE_ROOT; };
+		4766355D138F9B4C00C01D50 /* DetailedKeyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailedKeyView.xib; path = RSA.xcodeproj/DetailedKeyView.xib; sourceTree = SOURCE_ROOT; };
+		47663560138FA27400C01D50 /* PrimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeView.h; sourceTree = "<group>"; };
+		47663561138FA27400C01D50 /* PrimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeView.m; sourceTree = "<group>"; };
+		47663562138FA27400C01D50 /* PrimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrimeView.xib; sourceTree = "<group>"; };
+		4781ECAC13957FA100F7DF70 /* NewKeyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewKeyView.h; sourceTree = "<group>"; };
+		4781ECAD13957FA100F7DF70 /* NewKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewKeyView.m; sourceTree = "<group>"; };
+		4781ECAE13957FA100F7DF70 /* NewKeyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewKeyView.xib; sourceTree = "<group>"; };
+		4781ECB513958EAF00F7DF70 /* NewKeyNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewKeyNavigationView.h; sourceTree = "<group>"; };
+		4781ECB613958EB000F7DF70 /* NewKeyNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewKeyNavigationView.m; sourceTree = "<group>"; };
+		4781ECB713958EB000F7DF70 /* NewKeyNavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewKeyNavigationView.xib; sourceTree = "<group>"; };
 		47964CFC13868567006BD316 /* KeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyViewController.h; path = RSA.xcodeproj/KeyViewController.h; sourceTree = SOURCE_ROOT; };
 		47964CFD13868567006BD316 /* KeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyViewController.m; path = RSA.xcodeproj/KeyViewController.m; sourceTree = SOURCE_ROOT; };
 		47964CFE13868567006BD316 /* KeyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KeyViewController.xib; path = RSA.xcodeproj/KeyViewController.xib; sourceTree = SOURCE_ROOT; };
 		47964D04138686DA006BD316 /* KeyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyTableViewCell.xib; sourceTree = "<group>"; };
-		47964D261386D09E006BD316 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		47964D271386D0F1006BD316 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		47964D291386D0FA006BD316 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		47B09948138ECC61000CEAFB /* RSAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAAppDelegate.h; sourceTree = "<group>"; };
+		47B09949138ECC61000CEAFB /* RSAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAAppDelegate.m; sourceTree = "<group>"; };
 		47B3B80E138506AC00DB8431 /* 30-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30-key.png"; sourceTree = "<group>"; };
 		47B3B8121385082700DB8431 /* rsa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsa1.png; sourceTree = "<group>"; };
 		47B3B8141385083800DB8431 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -64,6 +75,7 @@
 		47B3B84713850ACB00DB8431 /* 04-squiggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-squiggle.png"; sourceTree = "<group>"; };
 		47B3B84913850B4500DB8431 /* 22-skull-n-bones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "22-skull-n-bones.png"; sourceTree = "<group>"; };
 		47B3B8821385153000DB8431 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		47D1168F139299CB004DB278 /* convertbot-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "convertbot-icon.png"; sourceTree = "<group>"; };
 		47D17BB113863A4A0042AFFB /* DecryptView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DecryptView.xib; sourceTree = "<group>"; };
 		47D17BB413863A500042AFFB /* DecryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecryptViewController.h; sourceTree = "<group>"; };
 		47D17BB513863A540042AFFB /* DecryptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecryptViewController.m; sourceTree = "<group>"; };
@@ -77,8 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47964D2A1386D0FA006BD316 /* QuartzCore.framework in Frameworks */,
-				47964D281386D0F1006BD316 /* CoreGraphics.framework in Frameworks */,
 				475DC3921383C960006C2AD3 /* UIKit.framework in Frameworks */,
 				475DC3941383C960006C2AD3 /* Foundation.framework in Frameworks */,
 			);
@@ -90,9 +100,7 @@
 		475DC3821383C95F006C2AD3 = {
 			isa = PBXGroup;
 			children = (
-				47964D291386D0FA006BD316 /* QuartzCore.framework */,
-				47964D271386D0F1006BD316 /* CoreGraphics.framework */,
-				47964D261386D09E006BD316 /* CoreGraphics.framework */,
+				47D1168F139299CB004DB278 /* convertbot-icon.png */,
 				47B3B8141385083800DB8431 /* Default.png */,
 				475DC3971383C960006C2AD3 /* RSA */,
 				475DC3901383C960006C2AD3 /* Frameworks */,
@@ -147,19 +155,118 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		47964D011386857B006BD316 /* Controllers */ = {
+		47663551138F99D800C01D50 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				4781ECB113957FAC00F7DF70 /* New key view */,
+				4781ECB213957FC200F7DF70 /* Detailed key view */,
+				4781ECB313957FD200F7DF70 /* Prime view */,
+				4781ECB413957FDD00F7DF70 /* Key view controller */,
+			);
+			name = Keys;
+			sourceTree = "<group>";
+		};
+		47663552138F99EA00C01D50 /* Decrypt */ = {
+			isa = PBXGroup;
+			children = (
+				47D17BB413863A500042AFFB /* DecryptViewController.h */,
+				47D17BB513863A540042AFFB /* DecryptViewController.m */,
+			);
+			name = Decrypt;
+			sourceTree = "<group>";
+		};
+		47663553138F99F400C01D50 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */,
+				C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */,
+			);
+			name = Encrypt;
+			sourceTree = "<group>";
+		};
+		47663554138F99FD00C01D50 /* Crack */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Crack;
+			sourceTree = "<group>";
+		};
+		4781ECA813957EC100F7DF70 /* Keys view */ = {
+			isa = PBXGroup;
+			children = (
+				47964CFE13868567006BD316 /* KeyViewController.xib */,
+				4766355D138F9B4C00C01D50 /* DetailedKeyView.xib */,
+				47964D04138686DA006BD316 /* KeyTableViewCell.xib */,
+				47663562138FA27400C01D50 /* PrimeView.xib */,
+				4781ECAE13957FA100F7DF70 /* NewKeyView.xib */,
+				4781ECB713958EB000F7DF70 /* NewKeyNavigationView.xib */,
+			);
+			name = "Keys view";
+			sourceTree = "<group>";
+		};
+		4781ECAA13957ED800F7DF70 /* Decrypt view */ = {
+			isa = PBXGroup;
+			children = (
+				47D17BB113863A4A0042AFFB /* DecryptView.xib */,
+			);
+			name = "Decrypt view";
+			sourceTree = "<group>";
+		};
+		4781ECAB13957EF400F7DF70 /* Encrypt view */ = {
+			isa = PBXGroup;
+			children = (
+				C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */,
+			);
+			name = "Encrypt view";
+			sourceTree = "<group>";
+		};
+		4781ECB113957FAC00F7DF70 /* New key view */ = {
+			isa = PBXGroup;
+			children = (
+				4781ECB513958EAF00F7DF70 /* NewKeyNavigationView.h */,
+				4781ECB613958EB000F7DF70 /* NewKeyNavigationView.m */,
+				4781ECAC13957FA100F7DF70 /* NewKeyView.h */,
+				4781ECAD13957FA100F7DF70 /* NewKeyView.m */,
+			);
+			name = "New key view";
+			sourceTree = "<group>";
+		};
+		4781ECB213957FC200F7DF70 /* Detailed key view */ = {
+			isa = PBXGroup;
+			children = (
+				4766355B138F9B4C00C01D50 /* DetailedKeyView.h */,
+				4766355C138F9B4C00C01D50 /* DetailedKeyView.m */,
+			);
+			name = "Detailed key view";
+			sourceTree = "<group>";
+		};
+		4781ECB313957FD200F7DF70 /* Prime view */ = {
+			isa = PBXGroup;
+			children = (
+				47663560138FA27400C01D50 /* PrimeView.h */,
+				47663561138FA27400C01D50 /* PrimeView.m */,
+			);
+			name = "Prime view";
+			sourceTree = "<group>";
+		};
+		4781ECB413957FDD00F7DF70 /* Key view controller */ = {
 			isa = PBXGroup;
 			children = (
 				47964CFC13868567006BD316 /* KeyViewController.h */,
 				47964CFD13868567006BD316 /* KeyViewController.m */,
-				47D17BB413863A500042AFFB /* DecryptViewController.h */,
-				47D17BB513863A540042AFFB /* DecryptViewController.m */,
-				475DC3A01383C960006C2AD3 /* RSAAppDelegate.h */,
-				475DC3A11383C960006C2AD3 /* RSAAppDelegate.m */,
-				475DC3A61383C960006C2AD3 /* RSAViewController.h */,
-				475DC3A71383C960006C2AD3 /* RSAViewController.m */,
-				C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */,
-				C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */,
+			);
+			name = "Key view controller";
+			sourceTree = "<group>";
+		};
+		47964D011386857B006BD316 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				47663554138F99FD00C01D50 /* Crack */,
+				47663553138F99F400C01D50 /* Encrypt */,
+				47663552138F99EA00C01D50 /* Decrypt */,
+				47663551138F99D800C01D50 /* Keys */,
+				47B09948138ECC61000CEAFB /* RSAAppDelegate.h */,
+				47B09949138ECC61000CEAFB /* RSAAppDelegate.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -167,12 +274,10 @@
 		47964D0213868583006BD316 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				47964CFE13868567006BD316 /* KeyViewController.xib */,
 				47B3B8821385153000DB8431 /* MainWindow.xib */,
-				47964D04138686DA006BD316 /* KeyTableViewCell.xib */,
-				47D17BB113863A4A0042AFFB /* DecryptView.xib */,
-				475DC3A91383C960006C2AD3 /* RSAViewController.xib */,
-				C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */,
+				4781ECA813957EC100F7DF70 /* Keys view */,
+				4781ECAB13957EF400F7DF70 /* Encrypt view */,
+				4781ECAA13957ED800F7DF70 /* Decrypt view */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -232,7 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				475DC39C1383C960006C2AD3 /* InfoPlist.strings in Resources */,
-				475DC3AB1383C960006C2AD3 /* RSAViewController.xib in Resources */,
 				47B3B80F138506AC00DB8431 /* 30-key.png in Resources */,
 				47B3B8131385082700DB8431 /* rsa1.png in Resources */,
 				47B3B8151385083800DB8431 /* Default.png in Resources */,
@@ -246,6 +350,11 @@
 				47964D05138686DA006BD316 /* KeyTableViewCell.xib in Resources */,
 				473F08571386DA6A00479C95 /* GradientGray.png in Resources */,
 				473F085A1386DA7E00479C95 /* GrayPattern.png in Resources */,
+				4766355F138F9B4C00C01D50 /* DetailedKeyView.xib in Resources */,
+				47663564138FA27400C01D50 /* PrimeView.xib in Resources */,
+				47D11690139299CB004DB278 /* convertbot-icon.png in Resources */,
+				4781ECB013957FA100F7DF70 /* NewKeyView.xib in Resources */,
+				4781ECB913958EB000F7DF70 /* NewKeyNavigationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,11 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				475DC39F1383C960006C2AD3 /* main.m in Sources */,
-				475DC3A21383C960006C2AD3 /* RSAAppDelegate.m in Sources */,
-				475DC3A81383C960006C2AD3 /* RSAViewController.m in Sources */,
 				C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */,
 				47D17BB613863A540042AFFB /* DecryptViewController.m in Sources */,
 				47964CFF13868567006BD316 /* KeyViewController.m in Sources */,
+				47B0994A138ECC61000CEAFB /* RSAAppDelegate.m in Sources */,
+				4766355E138F9B4C00C01D50 /* DetailedKeyView.m in Sources */,
+				47663563138FA27400C01D50 /* PrimeView.m in Sources */,
+				4781ECAF13957FA100F7DF70 /* NewKeyView.m in Sources */,
+				4781ECB813958EB000F7DF70 /* NewKeyNavigationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,14 +388,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		475DC3A91383C960006C2AD3 /* RSAViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				475DC3AA1383C960006C2AD3 /* en */,
-			);
-			name = RSAViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -291,14 +395,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marcel Boersma (424BL8GTYH)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DBD1BD29-43E0-46B5-B475-C0D02BAD3499";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -312,7 +417,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};

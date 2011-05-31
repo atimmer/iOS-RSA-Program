@@ -7,7 +7,7 @@
 //
 
 #import "DetailedKeyView.h"
-
+#import "PrimeView.h"
 
 @implementation DetailedKeyView
 
@@ -16,7 +16,20 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+
     }
+    return self;
+}
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if(self)
+    {
+
+    }
+    
     return self;
 }
 
@@ -83,20 +96,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 2;
+}
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if(section == 0)
+    {
+        return @"Priemgetallen";
+        
+    }else if(section == 1){
+        return @"N/Z";
+    }else if(section == 2){
+        return @"Keys";
+    }
+    
+    return @"";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -105,7 +132,8 @@
     }
     
     // Configure the cell...
-    
+    [cell.textLabel setText:@"19"];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
 
@@ -160,6 +188,19 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+    
+    if([indexPath section] == 0)
+    {
+        PrimeView *pv = [[PrimeView alloc] initWithNibName:@"PrimeView" bundle:nil];
+        
+        [self.navigationController  pushViewController:pv animated:YES];
+        
+        [pv release];
+    }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
 }
 
 @end

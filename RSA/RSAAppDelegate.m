@@ -11,4 +11,19 @@
 
 @implementation RSAAppDelegate
 
+
+@synthesize  myNavigationController;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+
+    return YES;
+}
+
+-(void)dealloc
+{
+    [myNavigationController release];
+    [super dealloc];
+}
+
 @end

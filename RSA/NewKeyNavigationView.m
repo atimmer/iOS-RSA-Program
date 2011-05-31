@@ -1,17 +1,15 @@
 //
-//  PrimeView.m
+//  NewKeyNavigationView.m
 //  RSA
 //
-//  Created by Marcel Boersma on 5/27/11.
+//  Created by Marcel Boersma on 5/31/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PrimeView.h"
+#import "NewKeyNavigationView.h"
+#import "NewKeyView.h"
 
-
-@implementation PrimeView
-
-@synthesize doneButton;
+@implementation NewKeyNavigationView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,9 +38,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.navigationItem.rightBarButtonItem = self.doneButton;
     // Do any additional setup after loading the view from its nib.
+    
+    NewKeyView *newKeyView = [[NewKeyView alloc] initWithNibName:@"NewKeyView" bundle:nil];
+    
+    [self setViewControllers:[NSArray arrayWithObject:newKeyView]];
+    
+    [newKeyView release];
+    
 }
 
 - (void)viewDidUnload
@@ -56,21 +59,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return 5;
-}
-
--(IBAction)doneButtonClicked:(id)sender
-{
-    NSLog(@"Done Button");
 }
 
 @end

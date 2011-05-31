@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PrimeView : UIViewController {
+@interface PrimeView : UIViewController<UIPickerViewDataSource> {
     
 }
+
+-(IBAction)doneButtonClicked:(id)sender;
+
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 
 @end

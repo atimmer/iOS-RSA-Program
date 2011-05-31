@@ -10,8 +10,12 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>convertbot-icon.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.MarcelBoersma.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.infinitedroplets.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
