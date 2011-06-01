@@ -35,6 +35,9 @@
 		47D11690139299CB004DB278 /* convertbot-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D1168F139299CB004DB278 /* convertbot-icon.png */; };
 		47D17BB213863A4A0042AFFB /* DecryptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D17BB113863A4A0042AFFB /* DecryptView.xib */; };
 		47D17BB613863A540042AFFB /* DecryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D17BB513863A540042AFFB /* DecryptViewController.m */; };
+		47E6BECF1396929800C56116 /* RSAKeysModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BECD1396929800C56116 /* RSAKeysModel.xcdatamodeld */; };
+		47E6BED21396935400C56116 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E6BED11396935400C56116 /* CoreData.framework */; };
+		47E6BED5139695BD00C56116 /* RSAKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BED4139695BD00C56116 /* RSAKeys.m */; };
 		C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */; };
 		C8F5E4EE13852D6500ADC81F /* EncryptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */; };
 /* End PBXBuildFile section */
@@ -79,6 +82,10 @@
 		47D17BB113863A4A0042AFFB /* DecryptView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DecryptView.xib; sourceTree = "<group>"; };
 		47D17BB413863A500042AFFB /* DecryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecryptViewController.h; sourceTree = "<group>"; };
 		47D17BB513863A540042AFFB /* DecryptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecryptViewController.m; sourceTree = "<group>"; };
+		47E6BECE1396929800C56116 /* RSAKeysModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSAKeysModel.xcdatamodel; sourceTree = "<group>"; };
+		47E6BED11396935400C56116 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		47E6BED3139695BD00C56116 /* RSAKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAKeys.h; sourceTree = "<group>"; };
+		47E6BED4139695BD00C56116 /* RSAKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAKeys.m; sourceTree = "<group>"; };
 		C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptViewController.h; sourceTree = "<group>"; };
 		C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptViewController.m; sourceTree = "<group>"; };
 		C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EncryptViewController.xib; sourceTree = "<group>"; };
@@ -89,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E6BED21396935400C56116 /* CoreData.framework in Frameworks */,
 				475DC3921383C960006C2AD3 /* UIKit.framework in Frameworks */,
 				475DC3941383C960006C2AD3 /* Foundation.framework in Frameworks */,
 			);
@@ -119,6 +127,7 @@
 		475DC3901383C960006C2AD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47E6BED11396935400C56116 /* CoreData.framework */,
 				475DC3911383C960006C2AD3 /* UIKit.framework */,
 				475DC3931383C960006C2AD3 /* Foundation.framework */,
 				475DC3951383C960006C2AD3 /* CoreGraphics.framework */,
@@ -285,6 +294,9 @@
 		47964D031386858C006BD316 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				47E6BECD1396929800C56116 /* RSAKeysModel.xcdatamodeld */,
+				47E6BED3139695BD00C56116 /* RSAKeys.h */,
+				47E6BED4139695BD00C56116 /* RSAKeys.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -374,6 +386,8 @@
 				47663563138FA27400C01D50 /* PrimeView.m in Sources */,
 				4781ECAF13957FA100F7DF70 /* NewKeyView.m in Sources */,
 				4781ECB813958EB000F7DF70 /* NewKeyNavigationView.m in Sources */,
+				47E6BECF1396929800C56116 /* RSAKeysModel.xcdatamodeld in Sources */,
+				47E6BED5139695BD00C56116 /* RSAKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +493,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47E6BECD1396929800C56116 /* RSAKeysModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47E6BECE1396929800C56116 /* RSAKeysModel.xcdatamodel */,
+			);
+			currentVersion = 47E6BECE1396929800C56116 /* RSAKeysModel.xcdatamodel */;
+			path = RSAKeysModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 475DC3841383C95F006C2AD3 /* Project object */;
 }

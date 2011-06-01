@@ -10,10 +10,12 @@
 #import <QuartzCore/QuartzCore.h>
 #import "DetailedKeyView.h"
 #import "NewKeyNavigationView.h"
+#import "RSAKeys.h"
+#import "RSAAppDelegate.h"
 
 @implementation KeyViewController
 
-@synthesize cell, addButton, editButton;
+@synthesize cell, addButton, editButton, managedObjectContext, RSAArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -21,6 +23,9 @@
     if (self) {
         // Custom initialization
         
+        RSAAppDelegate *myAppDelegate = (RSAAppDelegate*)[[UIApplication sharedApplication] delegate];
+        
+        self.managedObjectContext = [myAppDelegate managedObjectContext];
         
     }
     return self;
@@ -45,6 +50,7 @@
 {
     [super viewDidLoad];
     
+    
     //Hide the toolbar
     self.navigationController.toolbarHidden = YES;
     
@@ -59,9 +65,8 @@
     //self.myNavigationItem.leftBarButtonItem = self.editButton;
     
     
-    cells = 4;
   
-
+    cells = 4;
     
     
 
@@ -219,20 +224,7 @@
     
     NewKeyNavigationView *newKeyView = [[NewKeyNavigationView alloc] initWithNibName:@"NewKeyView" bundle:nil];
         
-    /*[UIView beginAnimations:@"NewKey" context:nil];
-    
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
-    
-    [UIView setAnimationDuration:0.25];
-    
-    [UIView commitAnimations];
-
-    
-    [self.navigationController pushViewController:newKeyView animated:NO];
-    
-    [self.navigationController setNavigationBarHidden:NO];
-    */
-    
+ 
     [self.navigationController presentModalViewController:newKeyView animated:YES];
     
     [self.tableView reloadData];
@@ -261,7 +253,8 @@
     
     cells--;
     
-    [tableView reloadData];
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    
     
     [cellToDelete setEditing:NO animated:YES];
     
