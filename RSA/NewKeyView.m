@@ -7,9 +7,14 @@
 //
 
 #import "NewKeyView.h"
+#import "RSAAppDelegate.h"
+#import "RSAKeys.h"
+#import <CoreData/CoreData.h>
+#import "KeyViewController.h"
 
 
 @implementation NewKeyView
+@synthesize managedObjectContext;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -43,7 +48,7 @@
     
     [self.navigationItem setTitle:@"Add RSA Key"];
     [self.navigationItem setLeftBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self.parentViewController action:@selector(dismissModalViewControllerAnimated:)] autorelease]];
-    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:nil action:nil] autorelease]];
+    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(clickedSaveButton:)] autorelease]];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -181,6 +186,28 @@
 */
 
 #pragma mark - Table view delegate
+
+-(IBAction)clickedSaveButton:(id)sender
+{
+    NSLog(@"Clicked saveButton");
+    
+    
+    RSAKeys *newRSAKey = (RSAKeys*) [NSEntityDescription insertNewObjectForEntityForName:@"RSAKeys" inManagedObjectContext:[(RSAAppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext]];
+    
+    [newRSAKey setName:[NSString stringWithString:@"MAMA"]];
+    [newRSAKey setPrimeA:[NSNumber numberWithInt:11]];
+    [newRSAKey setPrimeB:[NSNumber numberWithInt:13]];
+    
+    
+    [(RSAAppDelegate*)[[UIApplication sharedApplication] delegate] saveContext];
+    
+    
+    [newRSAKey release];
+    
+    [self.parentViewController dismissModalViewControllerAnimated:YES];
+    
+}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

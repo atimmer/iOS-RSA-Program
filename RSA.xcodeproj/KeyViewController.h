@@ -8,15 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "RSAKeys.h"
 
 @interface KeyViewController : UITableViewController {
-    NSInteger cells;
     NSMutableArray *RSAArray;
     NSManagedObjectContext *managedObjectContext;
 }
 
 -(IBAction)clickedAddButton:(id)sender;
 -(IBAction)clickedEditButton:(id)sender;
+-(IBAction)clickedSaveButton:(id)sender;
+
+-(void)loadKeys;
 
 
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell;

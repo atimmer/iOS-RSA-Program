@@ -8,6 +8,7 @@
 
 #import "KeyViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <CoreData/CoreData.h>
 #import "DetailedKeyView.h"
 #import "NewKeyNavigationView.h"
 #import "RSAKeys.h"
@@ -23,9 +24,6 @@
     if (self) {
         // Custom initialization
         
-        RSAAppDelegate *myAppDelegate = (RSAAppDelegate*)[[UIApplication sharedApplication] delegate];
-        
-        self.managedObjectContext = [myAppDelegate managedObjectContext];
         
     }
     return self;
@@ -50,6 +48,8 @@
 {
     [super viewDidLoad];
     
+    RSAArray = [[NSMutableArray alloc] init];
+    
     
     //Hide the toolbar
     self.navigationController.toolbarHidden = YES;
@@ -63,12 +63,6 @@
     //set the addbutton
     self.navigationItem.rightBarButtonItem = self.addButton;
     //self.myNavigationItem.leftBarButtonItem = self.editButton;
-    
-    
-  
-    cells = 4;
-    
-    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -77,6 +71,13 @@
      self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     [self.editButton setAction:@selector(clickedEditButton:)];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadKeys) name:@"newKeys" object:nil];
+    
+    [self loadKeys];
+    
+    
 }
 
 - (void)viewDidUnload
@@ -125,7 +126,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return cells;
+    return [RSAArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -145,8 +146,10 @@
     [acell setGestureRecognizers:[NSArray arrayWithObjects: leftslide, nil]];
 
     
-    [(UILabel *)[acell viewWithTag:1] setText:@"Marcel's Key"];
-    [(UILabel *)[acell viewWithTag:2] setText:@"Very strong security"];
+   
+    
+    [(UILabel *)[acell viewWithTag:1] setText:[[RSAArray objectAtIndex:indexPath.row] Name]];
+    [(UILabel *)[acell viewWithTag:2] setText:@"RSA Key"];
     
     // Configure the cell...
     
@@ -223,11 +226,11 @@
     NSLog(@"Add button clicked");
     
     NewKeyNavigationView *newKeyView = [[NewKeyNavigationView alloc] initWithNibName:@"NewKeyView" bundle:nil];
-        
+    
+    [newKeyView.navigationItem.rightBarButtonItem setTarget:self];
+    [newKeyView.navigationItem.rightBarButtonItem setAction:@selector(clickedSaveButton:)];
  
     [self.navigationController presentModalViewController:newKeyView animated:YES];
-    
-    [self.tableView reloadData];
     
     
     [newKeyView release];
@@ -246,19 +249,69 @@
 }
 
 
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    //cell to delete
+    RSAKeys *rsaKey = [self.RSAArray objectAtIndex:indexPath.row];
+    
+    if(self.managedObjectContext == nil)
+    {
+        self.managedObjectContext = [(RSAAppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    
+    [self.managedObjectContext deleteObject:rsaKey];
+    
+    [self.RSAArray removeObject:rsaKey];
+    
+    
     UITableViewCell *cellToDelete = [tableView cellForRowAtIndexPath:indexPath];
     
-    cells--;
     
     [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     
     
     [cellToDelete setEditing:NO animated:YES];
     
-    NSLog(@"blflsa");
+    NSLog(@"Cell succesfully deleted");
+  
 }
 
+-(void)loadKeys
+{
+    NSLog(@"load keys into array");
+    
+    if(self.managedObjectContext == nil)
+    {
+        self.managedObjectContext = [(RSAAppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *rsa = [NSEntityDescription entityForName:@"RSAKeys" inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:rsa];
+    
+    NSError *error = nil;
+    
+    NSMutableArray *results = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    
+    if(results)
+    {
+        
+        RSAArray = [[NSMutableArray alloc] initWithArray:results ];
+        [self.tableView reloadData];
+        
+    }
+    
+    [results release];
+    [request release];
+    
+    
+    
+}
+
+
+            
 @end
