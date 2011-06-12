@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RSAKeys.h"
 
 @interface DetailedKeyView : UITableViewController {
-    
+       RSAKeys *rsaKey;
 }
+
+-(void)setRSAKey:(RSAKeys*)key;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "DetailedKeyView.h"
 #import "PrimeView.h"
+#import "RSAKeys.h"
 
 @implementation DetailedKeyView
 
@@ -35,6 +36,7 @@
 
 - (void)dealloc
 {
+    
     [super dealloc];
 }
 
@@ -51,6 +53,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    [self.navigationItem setTitle:[NSString stringWithFormat:@"%@", [rsaKey Name]]];
+    
+  
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -66,6 +74,7 @@
     // e.g. self.myOutlet = nil;
 }
 
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -74,6 +83,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    //reload tableview
+    [self.tableView reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -131,9 +143,41 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
+   
+    
     // Configure the cell...
-    [cell.textLabel setText:@"19"];
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
+    switch (indexPath.section) {
+        case 0 :
+            if(indexPath.row==0)
+                [cell.textLabel setText:[NSString stringWithFormat:@"%@",[rsaKey PrimeA]]];
+            else
+                [cell.textLabel setText:[NSString stringWithFormat:@"%@",[rsaKey PrimeB]]];
+            
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                 
+            break;
+        case 1 :
+            if(indexPath.row==0)
+                [cell.textLabel setText:[NSString stringWithFormat:@"%@",[rsaKey N]]];
+            else
+                [cell.textLabel setText:[NSString stringWithFormat:@"%@",[rsaKey Z]]];
+
+            break;
+        case 2 :
+            if(indexPath.row==0)
+                [cell.textLabel setText:[NSString stringWithFormat:@"%@",[rsaKey PrivateKey]]];
+            else
+                [cell.textLabel setText:[NSString stringWithFormat:@"%@",[rsaKey PublicKey]]];
+
+            break;
+            
+        default:
+            break;
+    }
+    
+
+    
     return cell;
 }
 
@@ -192,6 +236,13 @@
     if([indexPath section] == 0)
     {
         PrimeView *pv = [[PrimeView alloc] initWithNibName:@"PrimeView" bundle:nil];
+        if([indexPath row] == 0)
+        {
+            [pv setA:YES];
+        }
+        
+        if(rsaKey)
+            [pv setRSAKey:rsaKey];
         
         [self.navigationController  pushViewController:pv animated:YES];
         
@@ -202,5 +253,15 @@
     
     
 }
+
+-(void)setRSAKey:(RSAKeys*)key
+{
+    NSLog(@"Set RSA Key to edit");
+    
+    rsaKey = key;
+    
+    
+}
+
 
 @end

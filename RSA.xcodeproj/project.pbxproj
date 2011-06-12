@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		471F281413992C120056B171 /* PrimesUpTo1000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 471F281313992C120056B171 /* PrimesUpTo1000.plist */; };
+		472909E913A1446700FD1790 /* NewPrimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 472909E713A1446600FD1790 /* NewPrimeView.m */; };
+		472909EA13A1446700FD1790 /* NewPrimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472909E813A1446700FD1790 /* NewPrimeView.xib */; };
 		473F08571386DA6A00479C95 /* GradientGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 473F08561386DA6A00479C95 /* GradientGray.png */; };
 		473F085A1386DA7E00479C95 /* GrayPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 473F08591386DA7E00479C95 /* GrayPattern.png */; };
 		475DC3921383C960006C2AD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3911383C960006C2AD3 /* UIKit.framework */; };
@@ -39,12 +41,16 @@
 		47E6BECF1396929800C56116 /* RSAKeysModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BECD1396929800C56116 /* RSAKeysModel.xcdatamodeld */; };
 		47E6BED21396935400C56116 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E6BED11396935400C56116 /* CoreData.framework */; };
 		47E6BED5139695BD00C56116 /* RSAKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BED4139695BD00C56116 /* RSAKeys.m */; };
+		47FE41EE13A35D0C00258E94 /* RSAKeyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FE41ED13A35D0C00258E94 /* RSAKeyGenerator.m */; };
 		C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */; };
 		C8F5E4EE13852D6500ADC81F /* EncryptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		471F281313992C120056B171 /* PrimesUpTo1000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrimesUpTo1000.plist; sourceTree = "<group>"; };
+		472909E613A1446600FD1790 /* NewPrimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPrimeView.h; sourceTree = "<group>"; };
+		472909E713A1446600FD1790 /* NewPrimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPrimeView.m; sourceTree = "<group>"; };
+		472909E813A1446700FD1790 /* NewPrimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPrimeView.xib; sourceTree = "<group>"; };
 		473F08561386DA6A00479C95 /* GradientGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GradientGray.png; sourceTree = "<group>"; };
 		473F08591386DA7E00479C95 /* GrayPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrayPattern.png; sourceTree = "<group>"; };
 		475DC38D1383C960006C2AD3 /* RSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +94,8 @@
 		47E6BED11396935400C56116 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		47E6BED3139695BD00C56116 /* RSAKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAKeys.h; sourceTree = "<group>"; };
 		47E6BED4139695BD00C56116 /* RSAKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAKeys.m; sourceTree = "<group>"; };
+		47FE41EC13A35D0C00258E94 /* RSAKeyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAKeyGenerator.h; sourceTree = SOURCE_ROOT; };
+		47FE41ED13A35D0C00258E94 /* RSAKeyGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAKeyGenerator.m; sourceTree = SOURCE_ROOT; };
 		C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptViewController.h; sourceTree = "<group>"; };
 		C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptViewController.m; sourceTree = "<group>"; };
 		C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EncryptViewController.xib; sourceTree = "<group>"; };
@@ -206,6 +214,7 @@
 		4781ECA813957EC100F7DF70 /* Keys view */ = {
 			isa = PBXGroup;
 			children = (
+				472909E813A1446700FD1790 /* NewPrimeView.xib */,
 				47964CFE13868567006BD316 /* KeyViewController.xib */,
 				4766355D138F9B4C00C01D50 /* DetailedKeyView.xib */,
 				47964D04138686DA006BD316 /* KeyTableViewCell.xib */,
@@ -239,6 +248,8 @@
 				4781ECB613958EB000F7DF70 /* NewKeyNavigationView.m */,
 				4781ECAC13957FA100F7DF70 /* NewKeyView.h */,
 				4781ECAD13957FA100F7DF70 /* NewKeyView.m */,
+				472909E613A1446600FD1790 /* NewPrimeView.h */,
+				472909E713A1446600FD1790 /* NewPrimeView.m */,
 			);
 			name = "New key view";
 			sourceTree = "<group>";
@@ -297,11 +308,21 @@
 		47964D031386858C006BD316 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				47FE41F013A35D1700258E94 /* RSAKeyGenerator */,
 				47E6BECD1396929800C56116 /* RSAKeysModel.xcdatamodeld */,
 				47E6BED3139695BD00C56116 /* RSAKeys.h */,
 				47E6BED4139695BD00C56116 /* RSAKeys.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		47FE41F013A35D1700258E94 /* RSAKeyGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				47FE41EC13A35D0C00258E94 /* RSAKeyGenerator.h */,
+				47FE41ED13A35D0C00258E94 /* RSAKeyGenerator.m */,
+			);
+			name = RSAKeyGenerator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +392,7 @@
 				4781ECB013957FA100F7DF70 /* NewKeyView.xib in Resources */,
 				4781ECB913958EB000F7DF70 /* NewKeyNavigationView.xib in Resources */,
 				471F281413992C120056B171 /* PrimesUpTo1000.plist in Resources */,
+				472909EA13A1446700FD1790 /* NewPrimeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +414,8 @@
 				4781ECB813958EB000F7DF70 /* NewKeyNavigationView.m in Sources */,
 				47E6BECF1396929800C56116 /* RSAKeysModel.xcdatamodeld in Sources */,
 				47E6BED5139695BD00C56116 /* RSAKeys.m in Sources */,
+				472909E913A1446700FD1790 /* NewPrimeView.m in Sources */,
+				47FE41EE13A35D0C00258E94 /* RSAKeyGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

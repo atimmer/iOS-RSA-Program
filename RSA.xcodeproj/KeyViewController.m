@@ -16,21 +16,28 @@
 
 @implementation KeyViewController
 
-@synthesize cell, addButton, editButton, managedObjectContext, RSAArray;
+@synthesize cell, addButton, editButton, managedObjectContext, RSAArray, fetchedResultsController;
 
-- (id)initWithStyle:(UITableViewStyle)style
+
+
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-        
-        
+    self = [super initWithCoder:aDecoder];
+    if(self)
+    {
+        NSLog(@"Initialize KeyViewController");
+        RSAArray = [[NSMutableArray alloc] init];
     }
+    
     return self;
 }
 
+
+
 - (void)dealloc
 {
+
+    [RSAArray release];
     [super dealloc];
 }
 
@@ -48,7 +55,7 @@
 {
     [super viewDidLoad];
     
-    RSAArray = [[NSMutableArray alloc] init];
+    NSLog(@"Loading KeyViewController::viewDidLoad");
     
     
     //Hide the toolbar
@@ -73,7 +80,6 @@
     [self.editButton setAction:@selector(clickedEditButton:)];
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadKeys) name:@"newKeys" object:nil];
     
     [self loadKeys];
     
@@ -90,7 +96,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    NSLog(@"View will appear, reload table data!");
+    [self loadKeys];
+    [self.tableView reloadData];
     
 }
 
@@ -126,7 +134,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [RSAArray count];
+    return [self.fetchedResultsController.fetchedObjects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -146,9 +154,10 @@
     [acell setGestureRecognizers:[NSArray arrayWithObjects: leftslide, nil]];
 
     
+    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
    
     
-    [(UILabel *)[acell viewWithTag:1] setText:[[RSAArray objectAtIndex:indexPath.row] Name]];
+    [(UILabel *)[acell viewWithTag:1] setText:[object valueForKey:@"Name"]];
     [(UILabel *)[acell viewWithTag:2] setText:@"RSA Key"];
     
     // Configure the cell...
@@ -213,6 +222,7 @@
      */
     
     DetailedKeyView *aVC = [[DetailedKeyView alloc] initWithNibName:@"DetailedKeyView" bundle:nil];
+    [aVC setRSAKey:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     
     [self.navigationController pushViewController:aVC animated:YES];
     
@@ -254,25 +264,37 @@
 {
     
     //cell to delete
-    RSAKeys *rsaKey = [self.RSAArray objectAtIndex:indexPath.row];
+    NSManagedObject *rsaKey = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     if(self.managedObjectContext == nil)
     {
         self.managedObjectContext = [(RSAAppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     }
     
+    
+    //delete the record
     [self.managedObjectContext deleteObject:rsaKey];
     
-    [self.RSAArray removeObject:rsaKey];
+    
+    //commit the delete
+    NSError *error;
+    [self.managedObjectContext save:&error];
     
     
+    //reload new keys
+    [self loadKeys];
+    
+    
+    //cell to delete
     UITableViewCell *cellToDelete = [tableView cellForRowAtIndexPath:indexPath];
     
-    
+    //delete cell
     [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     
     
     [cellToDelete setEditing:NO animated:YES];
+    
+ 
     
     NSLog(@"Cell succesfully deleted");
   
@@ -288,24 +310,28 @@
     }
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"Name" ascending:YES]];
+    request.predicate = nil;
+    request.fetchBatchSize = 20;
     
     NSEntityDescription *rsa = [NSEntityDescription entityForName:@"RSAKeys" inManagedObjectContext:self.managedObjectContext];
     
     [request setEntity:rsa];
     
+    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"keyCache"];
+    
+    self.fetchedResultsController = frc;
+    
+    
     NSError *error = nil;
     
-    NSMutableArray *results = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    [self.fetchedResultsController performFetch:&error];
     
-    if(results)
-    {
-        
-        RSAArray = [[NSMutableArray alloc] initWithArray:results ];
-        [self.tableView reloadData];
-        
-    }
+  
+    if(error)
+        NSLog(@"Woops something went wrong...");
     
-    [results release];
+    [frc release];
     [request release];
     
     

@@ -10,14 +10,14 @@
 #import <CoreData/CoreData.h>
 #import "RSAKeys.h"
 
-@interface KeyViewController : UITableViewController {
+@interface KeyViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
+    NSFetchedResultsController *fetchResultsController;
     NSMutableArray *RSAArray;
     NSManagedObjectContext *managedObjectContext;
 }
 
 -(IBAction)clickedAddButton:(id)sender;
 -(IBAction)clickedEditButton:(id)sender;
--(IBAction)clickedSaveButton:(id)sender;
 
 -(void)loadKeys;
 
@@ -28,5 +28,6 @@
 
 @property (nonatomic, retain) IBOutlet NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) IBOutlet NSMutableArray *RSAArray;
+@property (retain) NSFetchedResultsController *fetchedResultsController;
 
 @end

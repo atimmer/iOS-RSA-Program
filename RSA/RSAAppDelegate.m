@@ -42,7 +42,7 @@
     }
     
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"newKeys" object:nil];
+    
 }
 
 #pragma mark - Core Data stack
