@@ -178,10 +178,10 @@
 		47663551138F99D800C01D50 /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				4781ECB113957FAC00F7DF70 /* New key view */,
-				4781ECB213957FC200F7DF70 /* Detailed key view */,
-				4781ECB313957FD200F7DF70 /* Prime view */,
 				4781ECB413957FDD00F7DF70 /* Key view controller */,
+				4781ECB213957FC200F7DF70 /* Detailed key view */,
+				4781ECB113957FAC00F7DF70 /* New key view */,
+				4781ECB313957FD200F7DF70 /* Prime view */,
 			);
 			name = Keys;
 			sourceTree = "<group>";

@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
+@interface EncryptViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate> {
 
-@interface EncryptViewController : UIViewController <UITextViewDelegate> {
-    IBOutlet UITextView *toEncryptText;
-    IBOutlet UITextView *encryptedText;
 }
+
+@property (nonatomic, retain) IBOutlet NSFetchedResultsController *frc;
+
+@property (nonatomic, retain) IBOutlet UITextField *toEncryptText;
+@property (nonatomic, retain) IBOutlet UITextField *encryptedText;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+
+- (void)didEndEditingToEncryptTextField:(id)sender;
+
 
 @end
