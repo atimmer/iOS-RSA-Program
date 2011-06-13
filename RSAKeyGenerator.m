@@ -86,15 +86,26 @@
 
 -(NSString*)decrypteMessage:(NSString*)message
 {
+#warning CAN'T CALCULATE NUMBERS OF THAT SIZE (SO RSA WON'T WORK!!!)
     NSString *decryptedMessage = @"";
     
-    for(int i = 0; i < [message length]; i++)
+     NSArray *chars = [message componentsSeparatedByString:@" "];
+    
+    for(int i = 0; i < [chars count]; i++)
     {
-        char aCharFromMessage = [message characterAtIndex:i];
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSNumber * myNumber = [f numberFromString:[chars objectAtIndex:i]];
+        [f release];
         
-        int decryptedChar = (int)pow((double)aCharFromMessage, [self.privateKey doubleValue]) % [self.n intValue];
+        int charToDecrypt = [myNumber intValue];
         
-        decryptedMessage = [decryptedMessage stringByAppendingString:[NSString stringWithFormat:@"%c", decryptedChar]];
+        int decryptedChar = (int)pow((double)charToDecrypt, [self.privateKey doubleValue]) % [self.n intValue];
+        NSLog(@"self.n %i self.privateKey %i", [self.n intValue], [self.privateKey intValue]);
+        NSLog(@"Char to decrypt %i and decrypted char %i", [myNumber intValue], decryptedChar);
+
+        
+        decryptedMessage = [decryptedMessage stringByAppendingString:[NSString stringWithFormat:@"%c ", decryptedChar]];
     }
     
     return decryptedMessage;
@@ -104,16 +115,16 @@
 
 -(NSString*)encrypteMessage:(NSString*)message
 {
-    
+ #warning CAN'T CALCULATE NUMBERS OF THAT SIZE (SO RSA WON'T WORK!!!)   
     NSString *encryptedMessage = @"";
-    
+        
     for(int i = 0; i < [message length]; i++)
     {
         char aCharFromMessage = [message characterAtIndex:i];
         
         int encryptedChar = (int)pow((double)aCharFromMessage, [self.publicKey doubleValue]) % [self.n intValue];
         
-        encryptedMessage = [encryptedMessage stringByAppendingString:[NSString stringWithFormat:@"%i", encryptedChar]];
+        encryptedMessage = [encryptedMessage stringByAppendingString:[NSString stringWithFormat:@"%i ", encryptedChar]];
     }
     
     return encryptedMessage;

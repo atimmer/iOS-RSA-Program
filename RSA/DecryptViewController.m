@@ -107,7 +107,7 @@
             
             RSAKeyGenerator *keyGen = [[RSAKeyGenerator alloc] init];
             [keyGen setN:[NSDecimalNumber decimalNumberWithString:[[currentKey N] stringValue]]];
-            [keyGen setPublicKey:[NSDecimalNumber decimalNumberWithString:[[currentKey PublicKey] stringValue]]];
+            [keyGen setPrivateKey:[NSDecimalNumber decimalNumberWithString:[[currentKey PrivateKey] stringValue]]];
             
             NSString *encryptedMessage =  [keyGen decrypteMessage:textToEncrypt];
             
