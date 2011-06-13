@@ -16,7 +16,7 @@
 
 @implementation KeyViewController
 
-@synthesize cell, addButton, editButton, managedObjectContext, RSAArray, fetchedResultsController;
+@synthesize cell, addButton, editButton, managedObjectContext, fetchedResultsController;
 
 
 
@@ -26,7 +26,6 @@
     if(self)
     {
         NSLog(@"Initialize KeyViewController");
-        RSAArray = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -37,7 +36,10 @@
 - (void)dealloc
 {
 
-    [RSAArray release];
+    [self.editButton release];
+    [self.addButton release];
+    [self.cell release];
+    [self.fetchedResultsController release];
     [super dealloc];
 }
 
@@ -153,7 +155,8 @@
     
     [acell setGestureRecognizers:[NSArray arrayWithObjects: leftslide, nil]];
 
-   
+    [leftslide release];
+    
     NSManagedObject *object = [[self.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
    
     
@@ -256,6 +259,9 @@
     if(![scell isEditing])
         [scell   setEditing:YES animated:YES];
     
+    [swipeIndexPath release];
+    
+    
     
 }
 
@@ -323,6 +329,7 @@
     
     self.fetchedResultsController = frc;
     
+    [frc release];
     
     NSError *error = nil;
     

@@ -121,10 +121,12 @@
             
             [keyGen release];
             
+            [textToEncrypt release];
             
             
         }else{
             NSLog(@"Something went wrong while encrypting");
+            [self.encryptedText setText:@"Selecteer een key"];
         }
 
     }

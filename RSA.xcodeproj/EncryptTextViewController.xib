@@ -69,17 +69,17 @@
 							<int key="IBUIReturnKeyType">1</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="405867310">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="880776110">
 							<int key="type">1</int>
 							<int key="size">4</int>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="469639040">
+						<object class="NSFont" key="IBUIFont" id="162810498">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">14</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIPickerView" id="122389136">
+					<object class="IBUIPickerView" id="184028953">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">290</int>
 						<string key="NSFrame">{{0, 196}, {320, 216}}</string>
@@ -90,7 +90,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIShowsSelectionIndicator">YES</bool>
 					</object>
-					<object class="IBUITextView" id="667709826">
+					<object class="IBUITextView" id="110541980">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{30, 78}, {263, 98}}</string>
@@ -110,8 +110,8 @@
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="405867310"/>
-						<reference key="IBUIFont" ref="469639040"/>
+						<reference key="IBUIFontDescription" ref="880776110"/>
+						<reference key="IBUIFont" ref="162810498"/>
 					</object>
 				</object>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -4532,7 +4532,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dataSource</string>
-						<reference key="source" ref="122389136"/>
+						<reference key="source" ref="184028953"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">8</int>
@@ -4540,7 +4540,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="122389136"/>
+						<reference key="source" ref="184028953"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">9</int>
@@ -4557,7 +4557,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">picker</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="122389136"/>
+						<reference key="destination" ref="184028953"/>
 					</object>
 					<int key="connectionID">12</int>
 				</object>
@@ -4565,7 +4565,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">encryptedText</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="667709826"/>
+						<reference key="destination" ref="110541980"/>
 					</object>
 					<int key="connectionID">15</int>
 				</object>
@@ -4586,9 +4586,9 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="184028953"/>
+							<reference ref="110541980"/>
 							<reference ref="570003838"/>
-							<reference ref="122389136"/>
-							<reference ref="667709826"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -4610,12 +4610,12 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
-						<reference key="object" ref="122389136"/>
+						<reference key="object" ref="184028953"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="667709826"/>
+						<reference key="object" ref="110541980"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>

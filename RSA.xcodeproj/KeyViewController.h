@@ -12,7 +12,6 @@
 
 @interface KeyViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
     NSFetchedResultsController *fetchResultsController;
-    NSMutableArray *RSAArray;
     NSManagedObjectContext *managedObjectContext;
 }
 
@@ -27,7 +26,6 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *editButton;
 
 @property (nonatomic, retain) IBOutlet NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) IBOutlet NSMutableArray *RSAArray;
 @property (retain) NSFetchedResultsController *fetchedResultsController;
 
 @end

@@ -103,22 +103,25 @@
         [(UITextField*)sender resignFirstResponder];
         
         if([currentKey  N] != nil && [currentKey PublicKey] != nil){
-            NSString *textToEncrypt  = [self.toDecryptText text];
+            
+            NSString *textToDecrypt  = [self.toDecryptText text];
             
             RSAKeyGenerator *keyGen = [[RSAKeyGenerator alloc] init];
             [keyGen setN:[NSDecimalNumber decimalNumberWithString:[[currentKey N] stringValue]]];
             [keyGen setPrivateKey:[NSDecimalNumber decimalNumberWithString:[[currentKey PrivateKey] stringValue]]];
             
-            NSString *encryptedMessage =  [keyGen decrypteMessage:textToEncrypt];
+            NSString *decrypteMessage =  [keyGen decrypteMessage:textToDecrypt];
             
-            [self.decryptedText setText:encryptedMessage];
+            [self.decryptedText setText:decrypteMessage];
             
             [keyGen release];
+            [decrypteMessage release];
             
             
             
         }else{
             NSLog(@"Something went wrong while encrypting");
+            [self.decryptedText setText:@"Selecteer een key"];
         }
         
     }
@@ -156,7 +159,10 @@
 -(void)dealloc
 {
  
-    
+    [toDecryptText release];
+    [decryptedText release];
+    [picker release];
+    [frc   release];
     [super dealloc];
     
 }
