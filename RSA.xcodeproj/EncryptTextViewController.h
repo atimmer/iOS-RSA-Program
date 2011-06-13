@@ -1,8 +1,8 @@
 //
-//  DecryptViewController.h
+//  EncryptTextViewController.h
 //  RSA
 //
-//  Created by Marcel Boersma(1) on 5/19/11.
+//  Created by Marcel Boersma on 6/12/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -10,13 +10,14 @@
 #import <CoreData/CoreData.h>
 #import "RSAKeys.h"
 
-@interface DecryptViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
-    
+@interface EncryptTextViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate>
+{
     RSAKeys *currentKey;
 }
 
-@property (nonatomic, retain) IBOutlet UITextField *toDecryptText;
-@property (nonatomic, retain) IBOutlet UITextView *decryptedText;
+
+@property (nonatomic, retain) IBOutlet UITextField *toEncryptText;
+@property (nonatomic, retain) IBOutlet UITextView *encryptedText;
 @property (nonatomic, retain) IBOutlet UIPickerView *picker;
 
 @property (nonatomic, retain) IBOutlet NSFetchedResultsController *frc;

@@ -153,12 +153,13 @@
     
     [acell setGestureRecognizers:[NSArray arrayWithObjects: leftslide, nil]];
 
-    
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+   
+    NSManagedObject *object = [[self.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
    
     
     [(UILabel *)[acell viewWithTag:1] setText:[object valueForKey:@"Name"]];
     [(UILabel *)[acell viewWithTag:2] setText:@"RSA Key"];
+    
     
     // Configure the cell...
     
@@ -222,7 +223,7 @@
      */
     
     DetailedKeyView *aVC = [[DetailedKeyView alloc] initWithNibName:@"DetailedKeyView" bundle:nil];
-    [aVC setRSAKey:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+    [aVC setRSAKey:[[self.fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row]];
     
     [self.navigationController pushViewController:aVC animated:YES];
     
@@ -318,7 +319,7 @@
     
     [request setEntity:rsa];
     
-    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"keyCache"];
+    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     self.fetchedResultsController = frc;
     
@@ -331,7 +332,7 @@
     if(error)
         NSLog(@"Woops something went wrong...");
     
-    [frc release];
+    
     [request release];
     
     

@@ -12,6 +12,8 @@
 		472909EA13A1446700FD1790 /* NewPrimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472909E813A1446700FD1790 /* NewPrimeView.xib */; };
 		473F08571386DA6A00479C95 /* GradientGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 473F08561386DA6A00479C95 /* GradientGray.png */; };
 		473F085A1386DA7E00479C95 /* GrayPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 473F08591386DA7E00479C95 /* GrayPattern.png */; };
+		474E1EE213A51DB300A2469E /* EncryptTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474E1EE013A51DB300A2469E /* EncryptTextViewController.m */; };
+		474E1EE313A51DB300A2469E /* EncryptTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474E1EE113A51DB300A2469E /* EncryptTextViewController.xib */; };
 		475DC3921383C960006C2AD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3911383C960006C2AD3 /* UIKit.framework */; };
 		475DC3941383C960006C2AD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DC3931383C960006C2AD3 /* Foundation.framework */; };
 		475DC39C1383C960006C2AD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 475DC39A1383C960006C2AD3 /* InfoPlist.strings */; };
@@ -42,8 +44,6 @@
 		47E6BED21396935400C56116 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E6BED11396935400C56116 /* CoreData.framework */; };
 		47E6BED5139695BD00C56116 /* RSAKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6BED4139695BD00C56116 /* RSAKeys.m */; };
 		47FE41EE13A35D0C00258E94 /* RSAKeyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FE41ED13A35D0C00258E94 /* RSAKeyGenerator.m */; };
-		C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */; };
-		C8F5E4EE13852D6500ADC81F /* EncryptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +53,9 @@
 		472909E813A1446700FD1790 /* NewPrimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPrimeView.xib; sourceTree = "<group>"; };
 		473F08561386DA6A00479C95 /* GradientGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GradientGray.png; sourceTree = "<group>"; };
 		473F08591386DA7E00479C95 /* GrayPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrayPattern.png; sourceTree = "<group>"; };
+		474E1EDF13A51DB300A2469E /* EncryptTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncryptTextViewController.h; path = RSA.xcodeproj/EncryptTextViewController.h; sourceTree = SOURCE_ROOT; };
+		474E1EE013A51DB300A2469E /* EncryptTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EncryptTextViewController.m; path = RSA.xcodeproj/EncryptTextViewController.m; sourceTree = SOURCE_ROOT; };
+		474E1EE113A51DB300A2469E /* EncryptTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EncryptTextViewController.xib; path = RSA.xcodeproj/EncryptTextViewController.xib; sourceTree = SOURCE_ROOT; };
 		475DC38D1383C960006C2AD3 /* RSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475DC3911383C960006C2AD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		475DC3931383C960006C2AD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,9 +99,6 @@
 		47E6BED4139695BD00C56116 /* RSAKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAKeys.m; sourceTree = "<group>"; };
 		47FE41EC13A35D0C00258E94 /* RSAKeyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAKeyGenerator.h; sourceTree = SOURCE_ROOT; };
 		47FE41ED13A35D0C00258E94 /* RSAKeyGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAKeyGenerator.m; sourceTree = SOURCE_ROOT; };
-		C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptViewController.h; sourceTree = "<group>"; };
-		C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptViewController.m; sourceTree = "<group>"; };
-		C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EncryptViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +198,8 @@
 		47663553138F99F400C01D50 /* Encrypt */ = {
 			isa = PBXGroup;
 			children = (
-				C8F5E4EA13852D6500ADC81F /* EncryptViewController.h */,
-				C8F5E4EB13852D6500ADC81F /* EncryptViewController.m */,
+				474E1EDF13A51DB300A2469E /* EncryptTextViewController.h */,
+				474E1EE013A51DB300A2469E /* EncryptTextViewController.m */,
 			);
 			name = Encrypt;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 		4781ECAB13957EF400F7DF70 /* Encrypt view */ = {
 			isa = PBXGroup;
 			children = (
-				C8F5E4EC13852D6500ADC81F /* EncryptViewController.xib */,
+				474E1EE113A51DB300A2469E /* EncryptTextViewController.xib */,
 			);
 			name = "Encrypt view";
 			sourceTree = "<group>";
@@ -380,7 +380,6 @@
 				47B3B84813850ACB00DB8431 /* 04-squiggle.png in Resources */,
 				47B3B84A13850B4600DB8431 /* 22-skull-n-bones.png in Resources */,
 				47B3B8831385153000DB8431 /* MainWindow.xib in Resources */,
-				C8F5E4EE13852D6500ADC81F /* EncryptViewController.xib in Resources */,
 				47D17BB213863A4A0042AFFB /* DecryptView.xib in Resources */,
 				47964D0013868567006BD316 /* KeyViewController.xib in Resources */,
 				47964D05138686DA006BD316 /* KeyTableViewCell.xib in Resources */,
@@ -393,6 +392,7 @@
 				4781ECB913958EB000F7DF70 /* NewKeyNavigationView.xib in Resources */,
 				471F281413992C120056B171 /* PrimesUpTo1000.plist in Resources */,
 				472909EA13A1446700FD1790 /* NewPrimeView.xib in Resources */,
+				474E1EE313A51DB300A2469E /* EncryptTextViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +404,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				475DC39F1383C960006C2AD3 /* main.m in Sources */,
-				C8F5E4ED13852D6500ADC81F /* EncryptViewController.m in Sources */,
 				47D17BB613863A540042AFFB /* DecryptViewController.m in Sources */,
 				47964CFF13868567006BD316 /* KeyViewController.m in Sources */,
 				47B0994A138ECC61000CEAFB /* RSAAppDelegate.m in Sources */,
@@ -416,6 +415,7 @@
 				47E6BED5139695BD00C56116 /* RSAKeys.m in Sources */,
 				472909E913A1446700FD1790 /* NewPrimeView.m in Sources */,
 				47FE41EE13A35D0C00258E94 /* RSAKeyGenerator.m in Sources */,
+				474E1EE213A51DB300A2469E /* EncryptTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,14 +12,14 @@
 
 @implementation EncryptViewController
 
-@synthesize frc, toEncryptText, encryptedText, scrollView;
+@synthesize frc, toEncryptText, encryptedText;
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if(self)
     {
-        NSLog(@"Custom initialization of EncryptViewController");
+        NSLog(@"Custom initialization of EncryptViewController a");
     }
     
     return self;
@@ -31,7 +31,7 @@
     self = [super init];
     if(self)
     {
-        NSLog(@"Custom initialization of EncryptViewController");
+        NSLog(@"Custom initialization of EncryptViewController b");
     }
     
     return self;
@@ -72,7 +72,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSLog(@"Custom initialization of EncryptViewController");
+    NSLog(@"Custom initialization of EncryptViewController c");
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     request.entity = [NSEntityDescription entityForName:@"RSAKeys" inManagedObjectContext:[(RSAAppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext]]; 
     request.sortDescriptors = [NSArray  arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"Name" ascending:YES] autorelease]];

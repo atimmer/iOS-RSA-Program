@@ -17,7 +17,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *toEncryptText;
 @property (nonatomic, retain) IBOutlet UITextField *encryptedText;
-@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+
 
 - (void)didEndEditingToEncryptTextField:(id)sender;
 

@@ -94,7 +94,7 @@
         
         int decryptedChar = (int)pow((double)aCharFromMessage, [self.privateKey doubleValue]) % [self.n intValue];
         
-        decryptedMessage = [decryptedMessage stringByAppendingString:[NSString stringWithFormat:@"%i", decryptedChar]];
+        decryptedMessage = [decryptedMessage stringByAppendingString:[NSString stringWithFormat:@"%c", decryptedChar]];
     }
     
     return decryptedMessage;
