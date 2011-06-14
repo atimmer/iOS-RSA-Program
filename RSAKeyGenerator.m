@@ -100,7 +100,10 @@
         
         int charToDecrypt = [myNumber intValue];
         
-        int decryptedChar = (int)pow((double)charToDecrypt, [self.privateKey doubleValue]) % [self.n intValue];
+        NSDecimalNumber *bigNumber = [[[NSDecimalNumber alloc] initWithInteger:charToDecrypt] autorelease];
+        
+        NSDecimalNumber *powOfBigNum = [[bigNumber decimalNumberByRaisingToPower:[self.privateKey intValue]] autorelease];
+        int decryptedChar = [powOfBigNum integerValue] % [self.n integerValue];
         NSLog(@"self.n %i self.privateKey %i", [self.n intValue], [self.privateKey intValue]);
         NSLog(@"Char to decrypt %i and decrypted char %i", [myNumber intValue], decryptedChar);
 
@@ -122,7 +125,12 @@
     {
         char aCharFromMessage = [message characterAtIndex:i];
         
-        int encryptedChar = (int)pow((double)aCharFromMessage, [self.publicKey doubleValue]) % [self.n intValue];
+        
+        NSDecimalNumber *bigNumber = [[[NSDecimalNumber alloc] initWithInteger:aCharFromMessage] autorelease];
+        
+        NSDecimalNumber *powOfBigNum = [[bigNumber decimalNumberByRaisingToPower:[self.publicKey intValue]] autorelease];
+        int encryptedChar = [powOfBigNum integerValue] % [self.n integerValue];
+
         
         encryptedMessage = [encryptedMessage stringByAppendingString:[NSString stringWithFormat:@"%i ", encryptedChar]];
     }
